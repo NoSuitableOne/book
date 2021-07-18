@@ -31,8 +31,15 @@
     * [实现一个简易版的React](3rdlib/react/buildYourOwnReact.md)
     * [redux原理](3rdlib/react/redux)
   * Vue 
-    * [slot基础](3rdlib/vue/slot.md)
-    * [vue中的form](3rdlib/vue/form.md)
+    * vue基础
+      * [slot](3rdlib/vue/slot.md)
+      * [vue中的form](3rdlib/vue/form.md)
+    * [vue-router(见uniapp)](multi-end/uniapp/router.md)
+  * 跨端框架
+    * uniapp
+      * [uniapp基础](multi-end/uniapp/basic.md)
+      * [uniapp组件库](multi-end/uniapp/component.md)
+      * [uniapp路由](multi-end/uniapp/router.md) 
 * 网络
   * [http](net/http.md)
   * [nginx负载均衡策略](net/nginx.md)
