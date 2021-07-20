@@ -1,7 +1,7 @@
 
 thread-loader
 
-Speed Measure Plugin: 显示打包任务执行时间
+
 
 ## 页面优化的几个点
 1. 单个页面的代码如果有多模块，怎么保证合并
@@ -196,6 +196,16 @@ webpack可以没有配置文件，理论上webpack默认会以src/index.js为入
   3. webpack-dev-server目前还需要使用@next版本
 ### webpack性能优化
 1. 怎么查看webpack的打包结果？
+   [webpack打包分析插件](./analyze.md)
+   speed-measure-webpack-plugin插件显示打包任务执行时间
 2. 优化可以从哪几个方面入手？
+   1. 包的大小：比如代码分割、chunkSplit、dllPlugin/dllReferencePlugin
+   2. 加快打包速度：webpack多线程处理thread-loader插件
+   3. 优化配置项，缩短webpack打包搜索时间：包括loader的include/exclude、modules配置import导入语句的模块解析路径、resolve alias、resolve.mainFields明确第三方包的解析路径，resolve.extensions处理文件后缀名。
+   4. 生成页面预加载：<link>标签添加rel属性prefetch、preload
+   ```js
+   import(/* webpackPrefetch: true */ './path/to/LoginModal.js'); // 实现prefetch
+   import(/* webpackPreload: true */ './path/to/LoginModal.js'); // 实现preload
+   ```
 ### webpack的基本原理
 1. webpack的基本原理

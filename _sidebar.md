@@ -9,7 +9,7 @@
   * [babel](3rdlib/babel/index.md)
   * webpack
     * [webpack的问题总结](3rdlib/webpack/summary.md)
-    * [webpack打包](3rdlib/webpack/analyze.md)
+    * [webpack打包分析插件](3rdlib/webpack/analyze.md)
     * [webpack代码分割](3rdlib/webpack/codeSplit.md)
 * SSR
   * [理解SSR](ssr/ssr.md)

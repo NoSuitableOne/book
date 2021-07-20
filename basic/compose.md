@@ -263,7 +263,7 @@ dispatch = (((next3 => action3 => {...}) => action2 => {...}) => action1 => {...
 这就保证了整个模式还是洋葱模型，依照1->2->3顺序调用，当中间件内部调用`next`时会触发下一个中间件，最后一个中间件中next就是`store.dispatch`，然后再按照3->2->1的顺序回来。当然，这里有个问题，如果某个中间件中没调用next，那整个流程就断了。
 
 ## axios
-axios的中间件系统比较容易理解，整体看axios分成两类中间件，一类在发起请求前起作用，一类在发起请求后起作用。
+axios的中间件（拦截器）系统比较容易理解，整体看axios分成两类中间件，一类在发起请求前起作用，一类在发起请求后起作用。
 因为axios核心就是个请求库，可以简单理解为
 ```js
 axios(config) = Promise.resolve(config);  // 整个库的核心就是Axios.prototype.request方法下的这行代码
@@ -290,5 +290,5 @@ while (chain.length) {
 ## 总结
 这三个中间件系统相似的地方都是用数组结构存储中间件，不同之处在于组合函数不同
 其中符合洋葱模型的是koa和redux，axios直接通过promise的then链传递数据
-koa和axios都把结果把装成promise解决异步问题，redux是增强了next方法把异步问题替换成多个分布的同步问题
+koa和axios都把结果把封装成promise解决异步问题，redux是增强了next方法把异步问题替换成多个分步的同步问题
 
