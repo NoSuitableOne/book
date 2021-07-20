@@ -40,6 +40,9 @@
       * [uniapp基础](multi-end/uniapp/basic.md)
       * [uniapp组件库](multi-end/uniapp/component.md)
       * [uniapp路由](multi-end/uniapp/router.md) 
+* 解决方案
+  * [文件上传](solution/upload.md) 
+  * [UI组件库](solution/uiLibrary.md)
 * 网络
   * [http](net/http.md)
   * [nginx负载均衡策略](net/nginx.md)
